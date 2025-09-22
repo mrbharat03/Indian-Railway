@@ -7,7 +7,26 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { QrCode, Train } from "lucide-react"
+const Train = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <rect width="16" height="6" x="4" y="14" rx="2" />
+    <rect width="20" height="6" x="2" y="6" rx="2" />
+    <circle cx="8" cy="17" r="1" />
+    <circle cx="16" cy="17" r="1" />
+  </svg>
+)
+
+const QrCode = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <rect width="5" height="5" x="3" y="3" rx="1" />
+    <rect width="5" height="5" x="16" y="3" rx="1" />
+    <rect width="5" height="5" x="3" y="16" rx="1" />
+    <path d="m21 16-3.5-3.5-1 1" />
+    <path d="m21 21-3.5-3.5-1 1" />
+    <path d="m21 11-3.5-3.5-1 1" />
+  </svg>
+)
+
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
